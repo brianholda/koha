@@ -1,0 +1,536 @@
+/*-------------------------------------------------------------------------*/
+
+
+/*         General							                              */
+
+
+/*-------------------------------------------------------------------------*/
+
+@font-face {
+    /* always set this at front of stylesheet */
+    font-family: "Steelfish";
+    src: url("https://cdn.davenport.edu/libguides2/fonts/davenport-steelfish-bold-final-webfont.eot");
+    /* IE9 Compat Modes */
+    src: url("https://cdn.davenport.edu/libguides2/fonts/davenport-steelfish-bold-final-webfont.eot?#ie-fix") format("embedded-opentype"), url("https://cdn.davenport.edu/libguides2/fonts/davenport-steelfish-bold-final-webfont.woff") format("woff"), url("https://cdn.davenport.edu/libguides2/fonts/davenport-steelfish-bold-final-webfont.ttf") format("truetype"), url("https://cdn.davenport.edu/libguides2/fonts/davenport-steelfish-bold-final-webfont.svg") format("svg");
+    /* Legacy iOS */
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    border: 1px solid #505050;
+}
+
+body>#wrap>*:not(#header-region) {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+button#searchsubmit:focus {
+    outline-color: #EC7B7D;
+    border: 0.5px solid #EC7B7D;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px hsl(359.3, 80.5%, 55.7%, 0.3);
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*          Header - Top Navbar				                           */
+
+
+/*-------------------------------------------------------------------------*/
+
+#header-region {
+    margin: 0 -2.468rem;
+}
+
+@media (max-width: 440px) {
+    #header-region {
+        margin: 0;
+    }
+}
+
+#header-region .navbar-inner {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+}
+
+#header-region .navbar-inner>.container-fluid,
+#opacheader {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+#header-region li.divider-vertical {
+    display: none;
+}
+
+#logo {
+    background: transparent url("https://libapps.s3.amazonaws.com/customers/217/images/DU-Co-branded-Logo---Libraries--White-Horizontal-Clear_380x48.png") no-repeat scroll 0;
+}
+
+#logo,
+#logo a {
+    width: 380px !important;
+}
+
+#logo a {
+    padding: 60px 0 0;
+}
+
+@media (max-width: 767px) {
+    #logo {
+        background: transparent url("https://libapps.s3.amazonaws.com/customers/217/images/DU-D-Logo--White-Horizontal-Clear_44x48.png") no-repeat scroll 0;
+    }
+    #logo>a {
+        height: auto !important;
+        padding: 22px 0 22px 59px;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Steelfish", Arial, Helvetica, sans-serif;
+        font-size: 1.75rem;
+    }
+    #logo,
+    #logo>a {
+        width: auto !important;
+    }
+}
+
+.navbar-inverse .navbar-inner li>a.login-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-inverse .navbar-inner li>a {
+    text-shadow: none;
+}
+
+#cartDetails+ul.nav {
+    float: right;
+}
+
+#loggedinuser-menu {
+    min-width: auto;
+}
+
+#members a.login-link {
+    color: #e8583c;
+}
+
+.navbar-inverse .navbar-inner #members ul.dropdown-menu a.login-link:hover {
+    text-decoration: underline;
+    color: #e8583c;
+}
+
+#cartmenulink,
+i#carticon {
+    color: rgba(255, 255, 255, 0.9)
+}
+
+#cartmenulink:hover>* {
+    text-decoration: underline;
+}
+
+#header-region li.dropdown>a,
+#header-region li.dropdown>a>*,
+#header-region li.dropdown>a:focus,
+#header-region li.dropdown>a:focus>*,
+#header-region li.dropdown>a:hover,
+#header-region li.dropdown>a:hover>*,
+#header-region li.dropdown>p,
+#header-region li.dropdown>p>a,
+#members p.members,
+#listsmenu>b.caret,
+#user-menu>b.caret {
+    color: #fff;
+}
+
+#members>ul>li.dropdown>a:hover>* {
+    text-decoration: underline;
+}
+
+#listsmenu>b.caret,
+#user-menu>b.caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+#header-region .dropdown ul.dropdown-menu {
+    right: 0;
+    left: unset;
+}
+
+#header-region .dropdown ul.dropdown-menu:after {
+    right: 40px;
+    left: unset;
+}
+
+@media only screen and (max-width: 800px) {
+    .cartlabel,
+    .listslabel {
+        display: unset;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #user-menu-trigger {
+        display: none;
+    }
+    #members {
+        display: block;
+    }
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*                      Header - Below Top Navbar                       */
+
+
+/*-------------------------------------------------------------------------*/
+
+#header-region>.container-fluid {
+    background-color: #666;
+    padding: 36px 20px;
+}
+
+@media (max-width: 767px) and (min-width: 609px) {
+    #header-region>.container-fluid {
+        margin: 0 -20px;
+    }
+}
+
+#opacheader {
+    background-color: inherit;
+}
+
+.catalog-header {
+    background-color: #666;
+}
+
+.catalog-breadcrumbs {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.catalog-breadcrumbs>li {
+    display: inline-block;
+}
+
+.catalog-breadcrumbs>li+li:before {
+    content: "\00bb";
+    padding: 0 5px;
+    color: #ccc;
+}
+
+.catalog-breadcrumbs>li>a {
+    font-size: 11px;
+    color: #fff;
+    opacity: .9;
+    text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+}
+
+.catalog-title h2 {
+    font-family: "Steelfish", Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+
+.catalog-title h2>a:link,
+.catalog-title h2>a:visited,
+.catalog-title h2>a:hover,
+.catalog-title h2>a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*                      Search Box                       */
+
+
+/*-------------------------------------------------------------------------*/
+
+#opac-main-search {
+    max-width: 800px;
+}
+
+.mastheadsearch {
+    background-color: inherit;
+    padding: .8em 20px;
+}
+
+#moresearches {
+    display: none;
+}
+
+label[for="masthead_search"] {
+    /*to hide label, but keep accessible*/
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/*select dropdown*/
+
+#opac-main-search select {
+    font-size: 1rem;
+    height: 2.75rem;
+}
+
+
+/*box for search terms*/
+
+input#translControl1 {
+    font-size: 1.1rem;
+    height: 2.15rem;
+    width: 107%;
+}
+
+@media only screen and (max-width: 608px) {
+    input#translControl1 {
+        width: 97%;
+    }
+}
+
+
+/*Button to start search*/
+
+button#searchsubmit {
+    font-size: 1.6rem;
+    padding: .7rem 1.5rem;
+    font-family: "Steelfish", Arial, Helvetica, sans-serif;
+    background-image: none;
+    background-color: #e93335;
+}
+
+
+/*Advanced Search under Search Box*/
+
+form#searchform+p.advanced-search-wrapper {
+    margin-top: 10px;
+    text-align: right;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*                      Below Search Box                       */
+
+
+/*-------------------------------------------------------------------------*/
+
+ul.breadcrumb,
+div#notloggedin,
+div#loggedin,
+div#koha_url {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 608px) {
+    .main {
+        padding: initial;
+    }
+}
+
+@media only screen and (max-width: 608px) {
+    .main {
+        padding: initial;
+    }
+}
+
+
+/* Chat widget styling
+   ========================================================================== */
+
+button.libchat_online,
+button.libchat_offline {
+    transition: background-color 0.3s ease;
+}
+
+button.libchat_online {
+    background-color: #2f8400 !important;
+}
+
+button.libchat_online:hover {
+    background-color: #184400 !important;
+}
+
+button.libchat_offline {
+    background-color: #707070 !important;
+}
+
+button.libchat_offline:hover {
+    background-color: #404040 !important;
+}
+
+div#libchat_5815efd9e39afd452c5379e8699f73a1>button {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    z-index: 1000;
+    -webkit-animation: chat-wobble 10s ease-in-out 15s 3;
+    animation: chat-wobble 10s ease-in-out 15s 3;
+}
+
+@-webkit-keyframes chat-wobble {
+    2% {
+        transform: translateX(-15px) skewX(15deg);
+    }
+    4% {
+        transform: translateX(8px) skewX(-10deg);
+    }
+    6% {
+        transform: translateX(-5px) skewX(10deg);
+    }
+    8% {
+        transform: translateX(3px) skewX(-7deg);
+    }
+    10% {
+        transform: translateX(0px) skewX(2deg);
+    }
+    100% {
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes chat-wobble {
+    2% {
+        transform: translateX(-15px) skewX(15deg);
+    }
+    4% {
+        transform: translateX(8px) skewX(-10deg);
+    }
+    6% {
+        transform: translateX(-5px) skewX(10deg);
+    }
+    8% {
+        transform: translateX(3px) skewX(-7deg);
+    }
+    10% {
+        transform: translateX(0px) skewX(2deg);
+    }
+    100% {
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*                      Results Page                       */
+
+
+/*-------------------------------------------------------------------------*/
+
+select#sort_by {
+    font-size: initial;
+}
+
+
+/* 'Request e-book' button*/
+
+a.request-ebook {
+    color: #717073;
+    background-color: #fff;
+    border: 1px solid #717073;
+    padding: .75vh .75vw;
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+a.request-ebook:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #717073;
+    border-color: #717073;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*                      Login Page                       */
+
+
+/*-------------------------------------------------------------------------*/
+
+#opac-auth>h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #e93335;
+    font-weight: 700;
+    font-size: 1.55rem;
+}
+
+.du-login-heading+p {
+    display: none;
+}
+
+.guest-login-heading+p {
+    display: none !important;
+}
+
+.du-login-button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 3vh 0;
+    line-height: 1.25;
+}
+
+.guest-login-instructions>.no-login-title {
+    text-decoration: underline;
+    cursor: pointer;
+}

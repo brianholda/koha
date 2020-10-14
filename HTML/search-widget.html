@@ -1,0 +1,22 @@
+<form name="searchform" method="get" action="https://davenport.kohacatalog.com/cgi-bin/koha/opac-search.pl">
+    <fieldset>
+        <legend><h3>Search the Library Catalog</h3></legend>
+        <label for="masthead_search" class="hidden">Search</label>
+        <select name="idx" id="masthead_search" style="height: 37px; border: 1px solid gray;">
+            <option value>Keyword</option>
+            <option value="ti">Title</option>
+            <option value="au">Author</option>
+            <option value="su">Subject</option>
+            <option value="nb">ISBN</option>
+            <option value="se">Series</option>
+            <option value="callnum">Call number</option>
+        </select>
+
+        <label for="koha_search_input" class="hidden">Search: </label>
+        <input type="text" id="koha_search_input" title="Type search term" name="q"
+            style="border: 1px solid gray; padding: 6px;">
+        <button type="submit" id="koha_search_submit"
+            style="background-color: gray; color: #fff; padding: 5px 20px; font-size: 1.85rem; vertical-align: top;">Go</button>
+    </fieldset>
+
+</form>

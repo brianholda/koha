@@ -207,7 +207,7 @@ $(document).ready(function() {
 //Add hold option to bib record when logged out
 if (!$("#action > li > a.reserve").length) { //if hold option isn't there
     //add hold option
-    var hold = `<li><a class="reserve" href="/cgi-bin/koha/opac-reserve.pl?biblionumber=144">Place hold</a></li>`;
+    var hold = `<li><a class="reserve btn btn-link btn-lg" href="/cgi-bin/koha/opac-reserve.pl"><i class="fa fa-fw fa-bookmark" aria-hidden="true"></i> Place hold</a></li>`;
     $("#action").prepend(hold);
 }
 
